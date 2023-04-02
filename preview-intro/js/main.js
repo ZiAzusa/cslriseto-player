@@ -68,6 +68,16 @@ ap.on('loadstart', () => {
         document.getElementById('randBg').remove();
     } catch (error) {
         console.log("Hello, Castle!");
+        var playerFixed = document.querySelector(".aplayer.aplayer-fixed");
+        var playerBody = document.querySelector(".aplayer-body");
+        playerFixed.style.background = "#ffffff00";
+        playerFixed.style.top = 0;
+        playerFixed.style.left = "initial";
+        playerFixed.style.bottom = "initial";
+        playerBody.style.top = 0;
+        playerBody.style.left = "initial";
+        playerBody.style.bottom = "initial";
+        document.querySelector(".player").style.visibility = "initial";
     }
     songName = audioSrc.substring(audioSrc.lastIndexOf('/'), audioSrc.lastIndexOf('.'));
     var randBg = document.createElement('style');
@@ -75,19 +85,6 @@ ap.on('loadstart', () => {
     randBg.innerText = '.background{background:url(/asset/image/background' + songName + '.jpg) no-repeat;background-size:cover;background-position:center 0;content:"";width:100%;height:100%;top:0;left:0;z-index:-1;position:fixed;opacity:0;}';
     document.body.appendChild(randBg);
 });
-
-window.onload = () => {
-    var playerFixed = document.querySelector(".aplayer.aplayer-fixed");
-    var playerBody = document.querySelector(".aplayer-body");
-    playerFixed.style.background = "#ffffff00";
-    playerFixed.style.top = 0;
-    playerFixed.style.left = "initial";
-    playerFixed.style.bottom = "initial";
-    playerBody.style.top = 0;
-    playerBody.style.left = "initial";
-    playerBody.style.bottom = "initial";
-    document.querySelector(".player").style.visibility = "initial";
-}
 
 var backgrounds = ['雨之城', '孤独', '你给予我的晴天', '孤岛城市的传说', '入侵者', '黎明，太阳雨', '领主', '水没', '异世界海岸'];
 var bgImgs = new Array();
