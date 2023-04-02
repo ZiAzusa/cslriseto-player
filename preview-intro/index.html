@@ -1,1 +1,39 @@
-
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>梦雨工作室</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.loli.net/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+</head>
+<body>
+    <div class="child-page hello view" id="hello">
+        <nav class="title"><img src="image/logo.png" /><span>梦雨工作室</span></nav>
+        <div class="main">
+            <h1>Castle雨之城游戏</h1>
+        </div>
+    </div>
+    <div class="child-page part" id="introduce">游戏简介</div>
+    <div class="child-page part" id="download">游戏下载</div>
+    <div class="child-page part" id="about">关于我们</div>
+    <footer>
+        <div class="viewopt unfolder" onclick="viewOption(this);" title="展开"><i class="material">list</i></div>
+        <div class="option">
+            <div class="child-link" onclick="viewChild(this);" lid="introduce"><i class="material">info</i><span>游戏简介</span></div>&emsp;
+            <div class="child-link" onclick="viewChild(this);" lid="download"><i class="material">download</i><span>游戏下载</span></div>&emsp;
+            <div class="child-link" onclick="viewChild(this);" lid="about"><i class="material">group</i><span>关于我们</span></div>&emsp;
+            <div class="copyright"><span>Copyright &copy; 2023: 梦雨工作室, All Rights Reserved.</span></div>
+        </div>
+    </footer>
+    <div class="player" style="visibility:hidden;"></div>
+    <div class="container"></div>
+    <div class="background change"></div>
+    <script src="js/main.js" async></script>
+    <script src="js/animate.js" async></script>
+</body>
+</html>
